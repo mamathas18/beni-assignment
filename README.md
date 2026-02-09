@@ -1,42 +1,43 @@
-Full Stack Assignment – React + FastAPI on AWS EC2
+# Full Stack Assignment – React + FastAPI on AWS EC2
 
-This project contains a React frontend and FastAPI backend deployed on Amazon EC2.
+This project is a simple full-stack application with a React frontend and FastAPI backend deployed on Amazon EC2.
 
-PROJECT STRUCTURE
+---
+
+## 📁 Project Structure
 
 .
-Backend
+├── Backend  
+│   ├── main.py  
+│   └── requirements.txt  
 
-main.py
+├── Frontend  
+│   └── myapp  
+│       ├── package.json  
+│       └── src/App.js  
 
-requirements.txt
+---
 
-Frontend/myapp
+## 🚀 Backend Setup (FastAPI)
 
-package.json
-
-src/App.js
-
-BACKEND SETUP (FastAPI)
-
-Go to Backend folder
+Go to Backend folder:
 
 cd Backend
 
-Install Python and pip
+Install Python and pip:
 
 sudo yum install python3 python3-pip -y
 
-Edit requirements.txt
+Edit requirements.txt:
 
-fastapi
+fastapi  
 uvicorn[standard]
 
-Install backend dependencies
+Install backend dependencies:
 
 pip3 install -r requirements.txt
 
-Run backend
+Run backend:
 
 uvicorn main:app --host 0.0.0.0 --port 8000
 
@@ -44,21 +45,23 @@ Backend URL:
 
 http://13.201.99.242:8000/api/facts
 
-FRONTEND SETUP (React)
+---
 
-Go to frontend
+## 🚀 Frontend Setup (React)
 
-cd ../Frontend/myapp
+Go to frontend:
 
-Install node and npm
+cd Frontend/myapp
+
+Install Node and npm:
 
 sudo yum install nodejs npm -y
 
-Install dependencies
+Install dependencies:
 
 npm install
 
-Start frontend
+Start frontend:
 
 npm start
 
@@ -66,23 +69,29 @@ Frontend URL:
 
 http://13.201.99.242:3000
 
-EC2 SECURITY GROUP PORTS
+---
 
-22 – SSH
-8000 – FastAPI
-3000 – React
+## 🔓 EC2 Security Group Ports
 
-TECH STACK
+22 – SSH  
+8000 – FastAPI Backend  
+3000 – React Frontend  
 
-React
-FastAPI
-Uvicorn
-AWS EC2
-Node.js
-Python
+---
 
-AUTHOR
+## 🧠 Tech Stack
 
-Mamatha S
+React  
+FastAPI  
+Uvicorn  
+AWS EC2  
+Node.js  
+Python  
+
+---
+
+## ✨ Author
+
+Mamatha S  
 B.Tech Computer Science
-
+EOF
