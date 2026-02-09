@@ -1,7 +1,112 @@
-1 . How I Developed This Application
+# Full Stack Assignment – React + FastAPI (Deployed on AWS EC2)
 
-I developed this application as a simple full-stack web project consisting of a backend API and a frontend user interface. The backend was built using Python with FastAPI, where I created a REST API endpoint that returns a hardcoded list of facts in JSON format. The frontend was developed using React, which fetches data from the backend API using HTTP requests and displays the facts in a clean and simple UI. To make the application accessible publicly, I deployed the backend on a cloud service and hosted the frontend as a static web application. The project was organized into separate backend and frontend folders, and the complete source code was pushed to a public GitHub repository with proper documentation.
+This project contains:
 
-2. What I Learned in This Exercise
+- **Backend**: FastAPI (Python)
+- **Frontend**: React
+- Hosted on **Amazon EC2**
 
-Through this exercise, I learned how to build and integrate a basic full-stack application by connecting a frontend with a backend API. I gained hands-on experience in creating REST APIs, handling JSON responses, and consuming APIs in a React application. I also learned how to resolve real-world issues such as CORS errors and how frontend and backend communicate in production environments. Additionally, I learned the basics of cloud deployment, public URL access, and how to organize and document code using GitHub. This assignment helped me understand the end-to-end development and deployment workflow of a full-stack application.
+---
+
+## 📁 Project Structure
+
+.
+├── Backend
+│ ├── main.py
+│ ├── requirements.txt
+│ └── startup.txt
+│
+├── Frontend
+│ └── myapp
+│ ├── package.json
+│ └── src
+│ └── App.js
+│
+└── README.md
+
+
+---
+
+# 🚀 Backend Setup (FastAPI)
+
+### Step 1 – Go to Backend folder
+
+```bash
+cd Backend
+Step 2 – Install Python & pip (Amazon Linux)
+sudo yum install python3 python3-pip -y
+Verify:
+
+python3 --version
+pip3 --version
+Step 3 – Install backend dependencies
+Edit requirements.txt:
+
+fastapi
+uvicorn[standard]
+Install:
+
+pip3 install -r requirements.txt
+Step 4 – Run FastAPI server
+uvicorn main:app --host 0.0.0.0 --port 8000
+Backend will run at:
+
+http://13.201.99.242:8000/api/facts
+✅ Open EC2 Security Group Ports
+Allow inbound:
+
+Port	Purpose
+22	SSH
+8000	FastAPI
+3000	React
+🚀 Frontend Setup (React)
+Step 1 – Go to frontend folder
+cd ../Frontend/myapp
+Step 2 – Install Node & npm (Amazon Linux)
+sudo yum install nodejs npm -y
+Verify:
+
+node -v
+npm -v
+Step 3 – Install React dependencies
+npm install
+Step 4 – Start React app
+npm start
+Frontend will run at:
+
+http://13.201.99.242:3000
+🔗 API Integration
+Frontend fetches data from:
+
+http://13.201.99.242:8000/api/facts
+CORS is enabled in FastAPI:
+
+allow_origins=["http://13.201.99.242:3000"]
+✅ Test
+Open browser:
+
+Frontend:
+
+http://13.201.99.242:3000
+Backend:
+
+http://13.201.99.242:8000/api/facts
+🧠 Tech Stack
+React
+
+FastAPI
+
+Uvicorn
+
+AWS EC2
+
+Node.js
+
+Python 3
+
+✨ Author
+Mamatha S
+B.Tech Computer Science
+
+
+---
