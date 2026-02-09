@@ -1,0 +1,7 @@
+1 . How I Developed This Application
+
+I developed this application as a simple full-stack web project consisting of a backend API and a frontend user interface. The backend was built using Python with FastAPI, where I created a REST API endpoint that returns a hardcoded list of facts in JSON format. The frontend was developed using React, which fetches data from the backend API using HTTP requests and displays the facts in a clean and simple UI. To make the application accessible publicly, I deployed the backend on a cloud service and hosted the frontend as a static web application. The project was organized into separate backend and frontend folders, and the complete source code was pushed to a public GitHub repository with proper documentation.
+
+2. What I Learned in This Exercise
+
+Through this exercise, I learned how to build and integrate a basic full-stack application by connecting a frontend with a backend API. I gained hands-on experience in creating REST APIs, handling JSON responses, and consuming APIs in a React application. I also learned how to resolve real-world issues such as CORS errors and how frontend and backend communicate in production environments. Additionally, I learned the basics of cloud deployment, public URL access, and how to organize and document code using GitHub. This assignment helped me understand the end-to-end development and deployment workflow of a full-stack application.
