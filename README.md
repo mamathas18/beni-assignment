@@ -1,112 +1,88 @@
-# Full Stack Assignment – React + FastAPI (Deployed on AWS EC2)
+Full Stack Assignment – React + FastAPI on AWS EC2
 
-This project contains:
+This project contains a React frontend and FastAPI backend deployed on Amazon EC2.
 
-- **Backend**: FastAPI (Python)
-- **Frontend**: React
-- Hosted on **Amazon EC2**
-
----
-
-## 📁 Project Structure
+PROJECT STRUCTURE
 
 .
-├── Backend
-│ ├── main.py
-│ ├── requirements.txt
-│ └── startup.txt
-│
-├── Frontend
-│ └── myapp
-│ ├── package.json
-│ └── src
-│ └── App.js
-│
-└── README.md
+Backend
 
+main.py
 
----
+requirements.txt
 
-# 🚀 Backend Setup (FastAPI)
+Frontend/myapp
 
-### Step 1 – Go to Backend folder
+package.json
 
-```bash
+src/App.js
+
+BACKEND SETUP (FastAPI)
+
+Go to Backend folder
+
 cd Backend
-Step 2 – Install Python & pip (Amazon Linux)
-sudo yum install python3 python3-pip -y
-Verify:
 
-python3 --version
-pip3 --version
-Step 3 – Install backend dependencies
-Edit requirements.txt:
+Install Python and pip
+
+sudo yum install python3 python3-pip -y
+
+Edit requirements.txt
 
 fastapi
 uvicorn[standard]
-Install:
+
+Install backend dependencies
 
 pip3 install -r requirements.txt
-Step 4 – Run FastAPI server
+
+Run backend
+
 uvicorn main:app --host 0.0.0.0 --port 8000
-Backend will run at:
+
+Backend URL:
 
 http://13.201.99.242:8000/api/facts
-✅ Open EC2 Security Group Ports
-Allow inbound:
 
-Port	Purpose
-22	SSH
-8000	FastAPI
-3000	React
-🚀 Frontend Setup (React)
-Step 1 – Go to frontend folder
+FRONTEND SETUP (React)
+
+Go to frontend
+
 cd ../Frontend/myapp
-Step 2 – Install Node & npm (Amazon Linux)
+
+Install node and npm
+
 sudo yum install nodejs npm -y
-Verify:
 
-node -v
-npm -v
-Step 3 – Install React dependencies
+Install dependencies
+
 npm install
-Step 4 – Start React app
+
+Start frontend
+
 npm start
-Frontend will run at:
+
+Frontend URL:
 
 http://13.201.99.242:3000
-🔗 API Integration
-Frontend fetches data from:
 
-http://13.201.99.242:8000/api/facts
-CORS is enabled in FastAPI:
+EC2 SECURITY GROUP PORTS
 
-allow_origins=["http://13.201.99.242:3000"]
-✅ Test
-Open browser:
+22 – SSH
+8000 – FastAPI
+3000 – React
 
-Frontend:
+TECH STACK
 
-http://13.201.99.242:3000
-Backend:
-
-http://13.201.99.242:8000/api/facts
-🧠 Tech Stack
 React
-
 FastAPI
-
 Uvicorn
-
 AWS EC2
-
 Node.js
+Python
 
-Python 3
+AUTHOR
 
-✨ Author
 Mamatha S
 B.Tech Computer Science
 
-
----
