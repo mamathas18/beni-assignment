@@ -93,5 +93,4 @@ Python
 ## ✨ Author
 
 Mamatha S  
-B.Tech Computer Science
-EOF
+B.Tech Computer Science 
